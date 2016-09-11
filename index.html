@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="photoAPP">
+
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body ng-controller="albumCTL as albumList">
+    <p>{{"hello"+" you"}}</p>
+    <h1>Hello Plunker!</h1>
+    <br />
+    <div ng-repeat="album in albumList.albums | orderBy:'-date'">
+      <a href="{{album.url}}">{{album.date}}</a>
+      <p>{{album.tags}}</p>
+    </div>
+  </body>
+
+</html>

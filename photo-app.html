@@ -8,12 +8,10 @@
   </head>
 
   <body ng-controller="albumCTL as albumList">
-    <p>{{"hello"+" you"}}</p>
-    <h1>Hello Plunker!</h1>
+    <h1>Photo album links</h1>
     <br />
     <div ng-repeat="album in albumList.albums | orderBy:'-date'">
-      <a href="{{album.url}}">{{album.date}}</a>
-      <p>{{album.tags}}</p>
+      <a href="{{album.url}}">{{album.name}}</a>
     </div>
   </body>
 

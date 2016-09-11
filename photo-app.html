@@ -10,7 +10,7 @@
   <body ng-controller="albumCTL as albumList">
     <h1>Photo album links</h1>
     <br />
-    <div ng-repeat="album in albumList.albums | orderBy:'-date'">
+    <div ng-repeat="album in albumList.albums | orderBy:'-name'">
       <a href="{{album.url}}">{{album.name}}</a>
     </div>
   </body>

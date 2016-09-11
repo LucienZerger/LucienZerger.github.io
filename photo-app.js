@@ -2,23 +2,9 @@
 (function () {
     var app = angular.module('photoAPP', []);
 
-    var gem = {
-        name: 'Dodecahedron',
-        price: 2.95,
-        description: '. . .',
-    }
-    
     var albumArray = [
-      {
-      date: '2012.01',
-      url: 'https://hithere1.com',
-      tags: ['swimming', 'kinder']
-      },
-      {
-      date: '2016.06',
-      url: 'https://hithere5.com',
-      tags: ['bath', 'school']
-      }
+      { name: '2016.09.04 - Castlemaine', url: 'https://goo.gl/photos/SHvTAYVbQjhTpFzr8' },
+      { name: 'My Phone Wallpapers', url: 'https://goo.gl/photos/HxZQ5yRAKVMbwoUF6' }
     ];
 
     app.controller('albumCTL', function () {

@@ -23,7 +23,7 @@
                 <a href="{{album.url}}">{{album.date}}</a>
             </td>
             <td>
-                <span ng-repeat="tag in album.tags">{{tag}}</span>
+                <span ng-repeat="tag in album.tags">{{"<"+tag+"> "}}</span>
             </td>
         </tr>
     </table>

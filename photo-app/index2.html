@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="photoAPP">
+
+  <head>
+    <link rel="stylesheet" href="../styles/photo-app.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/photo-app.js"></script>
+  </head>
+
+  <body ng-controller="albumCTL as albumList">
+    <h1>Photo album links</h1>
+    <br />
+    Search: <input ng-model="searchStr" type="text" />
+    <br />
+    <br />
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Tags</th>
+        </tr>
+        <tr ng-repeat="album in albumList.albums | filter:searchStr | orderBy:'-date'">
+            <td>
+                <a href="{{album.url}}">{{album.date}}</a>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    <!--<div ng-repeat="album in albumList.albums | orderBy:'-name'">
+      <a href="{{album.url}}">{{album.name}}</a>
+    </div>-->
+  </body>
+
+</html>

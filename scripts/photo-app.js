@@ -5,7 +5,7 @@
     app.controller('albumController', function () {
         this.sortByAscending = false;
         this.list = [
-            { name: '2016.09', url: 'https://goo.gl/photos/SHvTAYVbQjhTpFzr8', tags: ['melody', 'castlemaine', 'playground'] },
+            { name: '2016.09', url: 'https://goo.gl/photos/SHvTAYVbQjhTpFzr8', tags: ['melody', 'castlemaine', 'playground', 'phone wallpaper'] },
             { name: '2016.08', url: 'https://goo.gl/photos/xuD93TdGjK9PkKXG7', tags: ['melody', 'home', 'book week dress up', 'iPad', 'school', 'science project'] },
             { name: '2016.07', url: 'https://goo.gl/photos/69H1zMXCBvqH234w5', tags: ['melody', 'shopkins', 'hand rash'] },
             { name: '2016.06', url: 'https://goo.gl/photos/qtchMYyGE1wajbv98', tags: ['melody', 'school photos', 'semester 1 report'] },

@@ -9,13 +9,29 @@
 
   <body ng-controller="albumController as albums">
       <center>
-          <h1>Photo album</h1>
-          <br />
-          Search keywords: <input ng-model="searchKey1" type="text" /> and/or <input ng-model="searchKey2" type="text" />
+          <h1 class="colInvert">Photo album</h1>
           <br />
           <br />
-      
       </center>
+      <table class="colInvert" align="center">
+          <tr>
+              <td align="right">
+                  Search keywords:
+              </td>
+              <td align="left">
+                  <input ng-model="searchKey1" type="text" />
+              </td>
+          </tr>
+          <tr>
+              <td align="right">
+                  
+              </td>
+              <td align="left">
+                  <input ng-model="searchKey2" type="text" />
+              </td>
+          </tr>
+      </table>
+      <br />
       <div style="overflow-x:auto;">
           <table width="100%">
               <!--<tr>
@@ -28,22 +44,22 @@
                   <td align="left">
                       <input ng-model="searchKey1" type="text" /> and/or <input ng-model="searchKey2" type="text" />
                   </td>
-              </tr>-->
+              </tr>
               <tr>
                   <td width="200" align="right">
                   </td>
                   <td width="40" align="center"></td>
                   <td align="left">
                   </td>
-              </tr>
-              <tr>
-                  <th width="200" align="right">Album name</th>
+              </tr>-->
+              <tr class="colInvert">
+                  <th width="200" align="right">Date</th>
                   <th width="40" align="center"></th>
                   <th align="left">Tags</th>
               </tr>
-              <tr ng-repeat="album in albums.list | filter:searchKey1 | filter:searchKey2 | orderBy:'-name'">
+              <tr class="mainTable" ng-repeat="album in albums.list | filter:searchKey1 | filter:searchKey2 | orderBy:'-date'">
                   <td width="200" align="right">
-                      <a href="{{album.url}}">{{album.name}}</a>
+                      <a href="{{album.url}}">{{album.date}}</a>
                   </td>
                   <td width="40" align="center">
                       -
@@ -55,7 +71,7 @@
               </tr>
           </table>
           <!--<div ng-repeat="album in albumList.albums | orderBy:'-name'">
-          <a href="{{album.url}}">{{album.name}}</a>
+          <a href="{{album.url}}">{{album.date}}</a>
         </div>-->
         </div>
     </body>

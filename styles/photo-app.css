@@ -1,9 +1,16 @@
 body {
     background-image: url("../images/6838265-gray-wallpaper.jpg");
 }
-tr:hover {
+tr.mainTable:hover {
     background-color: #a4cca4
 }
+/*
+*span.search {
+    font-family: "Arial", Times, serif;
+    background-color: #202020;
+    color: #D0D0D0
+}
+*/
 /*
 span {
     background-color: #808080
@@ -16,7 +23,7 @@ tr:nth-child(odd) {
 }
 
 */
-h1 {
+.colInvert /*h1*/ {
     font-family: "Arial", Times, serif;
     background-color: #202020;
     color: #D0D0D0
@@ -26,7 +33,10 @@ td.tag1 {
     font-size: 0.9em;
     background-color: #A0A0A0
 }
+/*
 th {
     background-color: #202020;
     color: #D0D0D0
 }
+
+*/

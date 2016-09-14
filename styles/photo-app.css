@@ -5,7 +5,8 @@ tr.mainTable:hover {
     background-color: #a4cca4
 }
 table.genTable {
-    width: 1100px
+    background-image: url("../images/greenTiles-maxResDefault-rot.jpg");
+    width: 1080px
 }
 .col1 {
     width: 80px;

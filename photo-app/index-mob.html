@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="photoAPP">
+
+    <head>
+        <link rel="stylesheet" href="../styles/photo-app.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="../scripts/photo-app.js"></script>
+    </head>
+
+    <body ng-controller="albumController as albums">
+        <h1 align="center" class="colInvert">Photo album</h1>
+        <br />
+        <br />
+        <table class="colInvert" align="center">
+            <tr>
+                <td align="right">
+                    Search keywords:
+                </td>
+                <td align="left">
+                    <input ng-model="searchKey1" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                  
+                </td>
+                <td align="left">
+                    <input ng-model="searchKey2" type="text" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table width="100%" style="overflow-x:auto">
+            <!--<tr>
+                <td width="200" align="right">
+                    Search keywords:
+                </td>
+                <td width="40" align="center">
+
+                </td>
+                <td align="left">
+                    <input ng-model="searchKey1" type="text" /> and/or <input ng-model="searchKey2" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td width="200" align="right">
+                </td>
+                <td width="40" align="center"></td>
+                <td align="left">
+                </td>
+            </tr>-->
+            <tr class="colInvert">
+                <th class="col1">Date</th>
+                <th class="col2"></th>
+                <th class="col3">Tags</th>
+            </tr>
+            <tr class="mainTable" ng-repeat="album in albums.list | filter:searchKey1 | filter:searchKey2 | orderBy:'-date'">
+                <td class="col1" valign="top">
+                    <a href="{{album.url}}">{{album.date}}</a>
+                </td>
+                <td class="col2">
+                    -
+                </td>
+                <td class="col3">
+                    <table><tr><td class="tag1" ng-repeat="tag in album.tags">{{tag}}</td></tr></table>
+                    <!--<span class="tag1" ng-repeat="tag in album.tags">{{"<"+tag+"> "}}</span>-->
+                </td>
+            </tr>
+        </table>
+    </body>
+
+</html>

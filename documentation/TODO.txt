@@ -1,0 +1,12 @@
+PAGE TITLE:
+left: title: Lucien Zerger's content
+right: search box
+
+PAGE TABS:
+tab1: photo albums
+tab2: school newsletters
+
+TAB1:
+
+TAB2:
+

@@ -31,7 +31,18 @@
             { date: '2013.11', url: 'https://goo.gl/photos/U5pCMNHh2gQLD6rBA', tags: ['melody', 'home', 'swimming', 'bunk bed', 'ymca', 'lake eppalock caravan park', '3rd birthday', 'lake weeroona', 'playground', 'bath'] },
             { date: '', url: '', tags: ['', ''] }
         ];
+    });
 
+    app.controller("panelController", function () {
+        this.tab = 1;
+
+        this.selectTab = function (_) {
+            this.tab = _;
+        };
+
+        this.isSelected = function (_) {
+            return this.tab === _;
+        };
 
     });
 })();

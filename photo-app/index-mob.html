@@ -17,7 +17,7 @@
                     Search keywords:
                 </td>
                 <td align="left">
-                    <input ng-model="searchKey1" type="text" />
+                    <input ng-model="searchKey1" type="text" width="100"/>
                 </td>
             </tr>
             <tr>
@@ -30,25 +30,81 @@
             </tr>
         </table>
         <br />
-        <table width="100%" style="overflow-x:auto">
-            <!--<tr>
-                <td width="200" align="right">
-                    Search keywords:
-                </td>
-                <td width="40" align="center">
 
-                </td>
-                <td align="left">
-                    <input ng-model="searchKey1" type="text" /> and/or <input ng-model="searchKey2" type="text" />
+        <table ng-controller="panelController as panel">
+            <tr>
+                <td class="panelTabs">
+                    <table>
+                        <tr>
+                            <td ng-class="{ tabActive:panel.isSelected(1) }">
+                                <a href ng-click="panel.selectTab(1)">angularjs</a>
+                            </td>
+                            <td ng-class="{ tabActive:panel.isSelected(2) }">
+                                <a href ng-click="panel.selectTab(2)">Photo albums</a>
+                            </td>
+                            <td ng-class="{ tabActive:panel.isSelected(3) }">
+                                <a href ng-click="panel.selectTab(3)">School newsletters</a>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             <tr>
-                <td width="200" align="right">
+                <td class="content">
+                    <div ng-show="panel.isSelected(1)">
+                        <img src="https://angularjs.org/img/AngularJS-large.png" />
+                    </div>
+                    <div ng-show="panel.isSelected(2)">
+                        <h4>Photo albums</h4>
+                        <p>2016.08</p>
+                        <p>2014.01</p>
+                    </div>
+                    <div ng-show="panel.isSelected(3)">
+                        <h4>School newsletters</h4>
+                        <p>07_august_2016</p>
+                        <p>16_july_2016</p>
+                    </div>
                 </td>
-                <td width="40" align="center"></td>
-                <td align="left">
+
+                <!--<td class="panelContent" ng-show="panel.isSelected(1)>
+                    <img src="https://angularjs.org/img/AngularJS-large.png" />
                 </td>
-            </tr>-->
+                <td class="panelContent" ng-show="panel.isSelected(2)>
+                    <h4>Photo albums</h4>
+                    <p>2016.08</p>
+                    <p>2014.01</p>
+                </td>
+                <td class="panelContent" ng-show="panel.isSelected(3)>
+                    <h4>School newsletters</h4>
+                    <p>07_august_2016</p>
+                    <p>16_july_2016</p>
+                </td>-->
+            </tr>
+        </table>
+
+        <!--<section ng-controller="panelController as panel">
+            <ul class="nav nav-pills">
+                <li ng-class="{ active:panel.isSelected(1)}">
+                    <a href ng-click="panel.selectTab(1)">Photo albums</a>
+                </li>
+                <li ng-class="{ active:panel.isSelected(2)}">
+                    <a href ng-click="panel.selectTab(2)">School newsletters</a>
+                </li>
+            </ul>
+            <div class="panel" ng-show="panel.isSelected(1)">
+                <h4>Photo albums</h4>
+                <p>2016.08</p>
+                <p>2014.01</p>
+            </div>
+            <div class="panel" ng-show="panel.isSelected(2)">
+                <h4>School newsletters</h4>
+                <p>07_august_2016</p>
+                <p>16_july_2016</p>
+            </div>
+        </section>-->
+
+        <br/>
+        <table width="100%" style="overflow-x:auto">
             <tr class="colInvert">
                 <th class="col1">Date</th>
                 <th class="col2"></th>

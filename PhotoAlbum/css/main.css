@@ -1,3 +1,39 @@
+
+@media screen and (max-width: 1680px) {
+
+body {
+    font-family: "Arial", Times, serif;
+    background-color: #000000;
+}
+
+.site {
+    width: 100%;
+}
+
+.header-logo {
+    background-color: #ff8455;
+    width: 210px;
+}
+
+.header-title {
+    color: #D0D0D0;
+    background-color: #147ced;
+    text-align: left;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+body {
+    font-family: "Arial", Times, serif;
+    background-color: #602020;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
 body {
     font-family: "Arial", Times, serif;
     background-color: #202020;
@@ -6,6 +42,10 @@ body {
 */
 }
 
+}
+
+
+/*
 td.panelTabs{
     text-align: left;
     padding-top: 2px;
@@ -68,18 +108,14 @@ table.genTable {
     text-align: left
 }
 
-.colInvert /*h1*/ {
-    font-family: "Arial", Times, serif;
-    background-color: #101010;
-    color: #D0D0D0
-}
-
 td.tag1 {
     font-family: "Arial", Times, serif;
     font-size: 0.85em;
     background-color: #A0A0A0;
     vertical-align: top
 }
+*/
+
 
 /*
 th {
@@ -87,15 +123,12 @@ th {
     color: #D0D0D0
 }
 
-*/
-/*
-*span.search {
+span.search {
     font-family: "Arial", Times, serif;
     background-color: #202020;
     color: #D0D0D0
 }
-*/
-/*
+
 span {
     background-color: #808080
 }

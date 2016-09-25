@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="PhotoAlbum">
+
+    <head>
+        <link rel="stylesheet" href="./css/main.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+        <script type="text/javascript" src="./js/app.js"></script>
+        <script type="text/javascript" src="./js/routes.js"></script>
+    </head>
+
+    <body>
+        <h1 align="center" class="colInvert">Photo album</h1>
+        <br />
+        <br />
+        <!--<table class="colInvert" align="center">
+            <tr>
+                <td align="right">
+                    Search keywords:
+                </td>
+                <td align="left">
+                    <input ng-model="searchKey1" type="text" width="100"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                  
+                </td>
+                <td align="left">
+                    <input ng-model="searchKey2" type="text" />
+                </td>
+            </tr>
+        </table>-->
+        <br />
+
+        <table>
+            <tr>
+                <td class="panelTabs">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="#/albums">Photo albums</a>
+                            </td>
+                            <td>
+                                <a href="#/newsletters">School newsletters</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <div ng-view></div>
+                </td>
+            </tr>
+        </table>
+    </body>
+
+</html>

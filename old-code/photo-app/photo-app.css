@@ -1,36 +1,87 @@
 body {
+    font-family: "Arial", Times, serif;
+    background-color: #202020;
+/*
     background-image: url("../images/6838265-gray-wallpaper.jpg");
+*/
 }
+
+td.panelTabs{
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: #404040
+}
+
+td.tabActive{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #808080
+}
+
+td.tabInactive{
+    text-transform: lowercase;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #808080
+}
+
+td.content{
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: black;
+    background-color: white;
+}
+
 tr.mainTable:hover {
     background-color: #a4cca4
 }
+
 table.genTable {
     background-image: url("../images/greenTiles-maxResDefault-rot.jpg");
     width: 1080px
 }
+
 .col1 {
     width: 80px;
     text-align: right
 }
+
 .col2 {
     width: 15px;
     text-align: center
 }
+
 .col3 {
     width: auto;
     text-align: left
 }
+
 .colInvert /*h1*/ {
     font-family: "Arial", Times, serif;
-    background-color: #202020;
+    background-color: #101010;
     color: #D0D0D0
 }
+
 td.tag1 {
     font-family: "Arial", Times, serif;
     font-size: 0.85em;
     background-color: #A0A0A0;
     vertical-align: top
 }
+
 /*
 th {
     background-color: #202020;

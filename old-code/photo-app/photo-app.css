@@ -50,7 +50,8 @@ tr.mainTable:hover {
 }
 
 table.genTable {
-    width: 1100px
+    background-image: url("../images/greenTiles-maxResDefault-rot.jpg");
+    width: 1080px
 }
 
 .col1 {

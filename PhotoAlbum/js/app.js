@@ -1,2 +1,1 @@
-angular.module("PhotoAlbum", ['ngRoute']);
-
+angular.module('PhotoAlbum', ['ngRoute']);

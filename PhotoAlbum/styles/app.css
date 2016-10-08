@@ -1,0 +1,196 @@
+html {
+  font-family: "Arial", Times, serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1680px) {
+
+body {
+  font-size: 100%;
+  background-color: #000000;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+body {
+  font-size: 60%;
+  background-color: #602020;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+body {
+  font-size: 28%;
+  /*background-color: #202020;*/
+
+}
+
+}
+
+table.gen-table {
+  background-color: rgba(128,128,128,0.5);
+
+}
+
+table.site {
+  background-image: url("../images/6838265-gray-wallpaper.jpg");
+  /*background-color: #202020;*/
+  border-spacing: 4px;
+  width: 95%;
+  border-spacing: 10px;
+}
+
+table.header {
+  width: 100%;
+}
+
+table.nav {
+  width: 100%;
+}
+
+td.nav-tab {
+  color: #D0D0D0;
+  text-align: center;
+  width: 50%;
+}
+
+table.content {
+  width: 100%;
+}
+
+table.footer {
+  width: 100%;
+}
+
+tr.header {
+  background-color: #606060;
+  padding: 4px;
+}
+
+td.header-logo {
+  width: 10%;
+}
+
+td.header-title {
+  color: #D0D0D0;
+  /*padding-left: 5%;*/
+  text-align: left;
+  width: 90%;
+}
+
+tr.nav {
+  background-color: #606060;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+
+
+/*
+td.panelTabs{
+  text-align: left;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #404040
+}
+
+td.tabActive{
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #808080
+}
+
+td.tabInactive{
+  text-transform: lowercase;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #808080
+}
+
+td.content{
+  text-align: left;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: black;
+  background-color: white;
+}
+
+tr.mainTable:hover {
+  background-color: #a4cca4
+}
+
+table.genTable {
+  width: 1100px
+}
+
+.col1 {
+  width: 80px;
+  text-align: right
+}
+
+.col2 {
+  width: 15px;
+  text-align: center
+}
+
+.col3 {
+  width: auto;
+  text-align: left
+}
+
+td.tag1 {
+  font-family: "Arial", Times, serif;
+  font-size: 0.85em;
+  background-color: #A0A0A0;
+  vertical-align: top
+}
+*/
+
+
+/*
+th {
+  background-color: #202020;
+  color: #D0D0D0
+}
+
+span.search {
+  font-family: "Arial", Times, serif;
+  background-color: #202020;
+  color: #D0D0D0
+}
+
+span {
+  background-color: #808080
+}
+tr:nth-child(even) {
+  background-color: #A0A0A0
+}
+tr:nth-child(odd) {
+  background-color: #606060
+}
+
+*/

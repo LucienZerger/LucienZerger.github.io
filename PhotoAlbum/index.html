@@ -2,31 +2,81 @@
 <html lang="en">
 
   <head>
-    <!-- <meta charset="utf-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- JavaScript -->
-    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script> -->
 
-    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
-    <script type="text/javascript" src="PhotoAlbumApp.js"></script>
+    <link rel="stylesheet" href="styles/app.css" />
+    <script type="text/javascript" src="styles/app.mdl.js"></script>
+    <script type="text/javascript" src="styles/nav.mdl.js"></script>
+    <script type="text/javascript" src="styles/nav.cfg.js"></script>
+    <script type="text/javascript" src="styles/nav.ctrl.js"></script>
   </head>
 
-  <body ng-app="PhotoAlbumApp">
-    <h1>Photo album</h1>
+  <body ng-app="PhotoAlbum.App">
+    <div class="container">
+      <h1>Hello World!</h1>
+      <p>Resize the browser window to see the effect.</p>
+      <div class="row">
+        <div class="col-xs-2" style="background-color:lavender;">
+          <img src="../images/0e05766852728cd4774a82174c8f34c8_large_crop_green.jpg" width="100%"/>
+        </div>
+        <div class="col-xs-5" style="background-color:lavenderblush;">
+          PhotoAlbumApp
+        </div>
+        <div class="col-xs-5" style="background-color:lavender;">
+          .col-sm-4
+        </div>
+      </div>
+
+      <div class="" ng-controller="navController as nav">
+        <div class="row">
+          <div class="col-xs-4 text-center bg-info">
+            <a href ng-click="nav.selectTab(1)">Albums</a>
+          </div>
+          <div class="col-xs-4 text-center bg-info">
+            <a href ng-click="nav.selectTab(2)">Newsletters</a>
+          </div>
+          <div class="col-xs-4 text-center bg-danger">
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div ng-show="nav.isSelected(1)">
+              Album 1 <br>
+              Album 2 <br>
+            </div>
+
+            <div ng-show="nav.isSelected(2)">
+              Newsletter 1 <br>
+              Newsletter 2 <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- <h1>Photo album</h1>
     <br />
     <br />
     <a href="#/albums"> - Photo albums</a>
     <a href="#/newsletters"> - School newsletters</a>
     <br />
     <br />
-    <div ng-view></div>
+    <div ng-view></div> -->
   </body>
 
 </html>

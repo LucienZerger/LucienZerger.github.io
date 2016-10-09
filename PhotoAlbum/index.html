@@ -14,11 +14,17 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script> -->
 
-    <link rel="stylesheet" href="styles/app.css" />
-    <script type="text/javascript" src="styles/app.mdl.js"></script>
-    <script type="text/javascript" src="styles/nav.mdl.js"></script>
-    <script type="text/javascript" src="styles/nav.cfg.js"></script>
-    <script type="text/javascript" src="styles/nav.ctrl.js"></script>
+    <link rel="stylesheet" href="styles/core/app.css" />
+    <script type="text/javascript" src="styles/core/app.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/nav/nav.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/nav/nav.cfg.js"></script>
+    <script type="text/javascript" src="styles/core/nav/nav.ctrl.js"></script>
+    <script type="text/javascript" src="styles/core/album/album.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/album/album.cfg.js"></script>
+    <script type="text/javascript" src="styles/core/album/album.ctrl.js"></script>
+    <script type="text/javascript" src="styles/core/newsletter/newsletter.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/newsletter/newsletter.cfg.js"></script>
+    <script type="text/javascript" src="styles/core/newsletter/newsletter.ctrl.js"></script>
   </head>
 
   <body ng-app="PhotoAlbum.App">
@@ -26,40 +32,71 @@
       <h1>Hello World!</h1>
       <p>Resize the browser window to see the effect.</p>
       <div class="row">
-        <div class="col-xs-2" style="background-color:lavender;">
-          <img src="../images/0e05766852728cd4774a82174c8f34c8_large_crop_green.jpg" width="100%"/>
+        <div class="col-xs-2 header-logo">
+          <img src="../images/0e05766852728cd4774a82174c8f34c8_small_crop_green.jpg" width="100%"/>
         </div>
-        <div class="col-xs-5" style="background-color:lavenderblush;">
-          PhotoAlbumApp
-        </div>
-        <div class="col-xs-5" style="background-color:lavender;">
-          .col-sm-4
+        <div class="col-xs-10 header-title">
+          Photo Album
         </div>
       </div>
-
+      <br>
       <div class="" ng-controller="navController as nav">
         <div class="row">
-          <div class="col-xs-4 text-center bg-info">
-            <a href ng-click="nav.selectTab(1)">Albums</a>
+          <div class="col-xs-3 text-center pa-nav pa-albums">
+            <a href role="button" ng-click="nav.selectTab(1)">Albums</a>
           </div>
-          <div class="col-xs-4 text-center bg-info">
-            <a href ng-click="nav.selectTab(2)">Newsletters</a>
+          <div class="col-xs-1 text-center">
+
           </div>
-          <div class="col-xs-4 text-center bg-danger">
+          <div class="col-xs-3 text-center pa-nav pa-newsletters">
+            <a href role="button" ng-click="nav.selectTab(2)">Newsletters</a>
+          </div>
+          <div class="col-xs-1 text-center">
+
+          </div>
+          <div class="col-xs-3 text-center">
+
+          </div>
+          <div class="col-xs-1 text-center">
 
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-12">
-            <div ng-show="nav.isSelected(1)">
-              Album 1 <br>
-              Album 2 <br>
+            <div class="pa-panel pa-albums" ng-show="nav.isSelected(1)" ng-controller="albumController as album">
+              <div class="list-group" ng-repeat="albumItem in album.list">
+                <a href="{{albumItem.url}}" class="list-group-item">
+                  <h4 class="list-group-item-heading">{{albumItem.date}}</h4>
+                  <p class="list-group-item-text">
+                    <span class="" ng-repeat="albumTag in albumItem.tags">
+                      {{albumTag + ", "}}
+                    </span>
+                  </p>
+                </a>
+              </div>
+
+              <!-- <table width="95%" align="center">
+                <tr ng-repeat="albumItem in album.list">
+                  <td class="well well-sm">
+                    <a href="{{albumItem.url}}">{{albumItem.date}}</a>
+                    <br>
+                    <div class="" ng-repeat="albumTag in albumItem.tags">
+                      {{albumTag + ", "}}
+                    </div>
+                  </td>
+                </tr>
+              </table> -->
             </div>
 
-            <div ng-show="nav.isSelected(2)">
-              Newsletter 1 <br>
-              Newsletter 2 <br>
+            <div class="pa-panel pa-newsletters" ng-show="nav.isSelected(2)" ng-controller="newsletterController as newsletter">
+              <table width="95%" align="center">
+                <tr ng-repeat="newsletterItem in newsletter.list">
+                  <td class="well well-sm">
+                    <a href="{{newsletterItem.url}}">{{newsletterItem.filename}}</a>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>

@@ -1,103 +1,48 @@
 html {
   font-family: "Arial", Times, serif;
-  font-size: 16px;
+  /*font-size: 16px;*/
 }
-
-@media screen and (max-width: 1680px) {
-
-body {
-  font-size: 100%;
-  background-color: #000000;
-}
-
-}
-
-@media screen and (max-width: 1024px) {
-
-body {
-  font-size: 60%;
-  background-color: #602020;
-}
-
-}
-
-@media screen and (max-width: 480px) {
-
-body {
-  font-size: 28%;
-  /*background-color: #202020;*/
-
-}
-
-}
-
+/*
 table.gen-table {
   background-color: rgba(128,128,128,0.5);
 
 }
+*/
 
-table.site {
-  background-image: url("../images/6838265-gray-wallpaper.jpg");
-  /*background-color: #202020;*/
-  border-spacing: 4px;
-  width: 95%;
-  border-spacing: 10px;
+body {
+  font-size: 16px;
+  background-color: #000000;
+  background-image: url("../../../images/cool-tiles-330843b.jpg");
 }
 
-table.header {
-  width: 100%;
+div.header-logo {
+  background-color: rgba(138, 255, 80, 0.5);
 }
 
-table.nav {
-  width: 100%;
+div.header-title {
+  font-size: 3.6em;
+  color: white;
+  background-color: rgba(138, 255, 80, 0.9);
 }
 
-td.nav-tab {
-  color: #D0D0D0;
-  text-align: center;
-  width: 50%;
+.pa-nav {
+  font-size: 130%;
+  font-weight: bold;
 }
 
-table.content {
-  width: 100%;
+.pa-albums {
+  color: white;
+  background-color: rgba(0, 64, 0, 0.9);
 }
 
-table.footer {
-  width: 100%;
+.pa-newsletters {
+  color: white;
+  background-color: rgba(0, 0, 64, 0.9);
 }
 
-tr.header {
-  background-color: #606060;
-  padding: 4px;
-}
+.pa-panel {
 
-td.header-logo {
-  width: 10%;
 }
-
-td.header-title {
-  color: #D0D0D0;
-  /*padding-left: 5%;*/
-  text-align: left;
-  width: 90%;
-}
-
-tr.nav {
-  background-color: #606060;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 1.875em;
-}
-
-p {
-  font-size: 0.875em;
-}
-
 
 /*
 td.panelTabs{

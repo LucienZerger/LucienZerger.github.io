@@ -77,14 +77,20 @@
               <div class="" ng-show="nav.isSelected(2)" ng-controller="albumController as album">
                 <table class="" width="95%" align="center">
                   <tr>
-                    <th>Date</th>
-                    <th>Tags</th>
+                    <th>
+                      Date
+                      <a href class="sort-chevron" ng-click="album.setOrder('down')"><span class="glyphicon glyphicon-chevron-down"></span></a>
+                      <a href class="sort-chevron" ng-click="album.setOrder('up')"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </th>
+                    <th>
+                      Tags
+                    </th>
                   </tr>
-                  <tr ng-repeat="albumItem in album.list | filter:searchKey1 | orderBy:'-date'">
-                    <td width="10%">
+                  <tr ng-repeat="albumItem in album.list | filter:searchKey1 | orderBy:album.getOrder()">
+                    <td width="90">
                       <a href="{{albumItem.url}}" target="_blank">{{albumItem.date}}</a>
                     </td>
-                    <td width="90%" style="font-size:80%">
+                    <td width="auto" style="font-size:80%">
                       <span class="" ng-repeat="albumTag in albumItem.tags">
                         <span class="glyphicon glyphicon-tag" style="font-size:70%"></span>{{albumTag}}
                       </span>
@@ -96,9 +102,13 @@
               <div class="" ng-show="nav.isSelected(3)" ng-controller="newsletterController as newsletter">
                 <table class="" width="95%" align="center">
                   <tr>
-                    <th>Filename</th>
+                    <th>
+                      Filename
+                      <a href class="sort-chevron" ng-click="newsletter.setOrder('down')"><span class="glyphicon glyphicon-chevron-down"></span></a>
+                      <a href class="sort-chevron" ng-click="newsletter.setOrder('up')"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </th>
                   </tr>
-                  <tr ng-repeat="newsletterItem in newsletter.list | filter:searchKey1 | orderBy:'-filename'">
+                  <tr ng-repeat="newsletterItem in newsletter.list | filter:searchKey1 | orderBy:newsletter.getOrder()">
                     <td width="10%">
                       <a href="{{newsletterItem.url}}" target="_blank">{{newsletterItem.filename}}</a>
                     </td>
@@ -119,7 +129,7 @@
         <small>
           <span class="glyphicon glyphicon-copyright-mark"></span> <a href="https://lucienzerger.github.io/" style="color:white">Lucien Zerger</a>
           <br>
-          Powered by <img src="https://docs.angularjs.org/img/angularjs-for-header-only.svg" height="20" alt="AngularJS" />
+          Powered by <img src="https://angularjs.org/img/AngularJS-small.png" height="20" alt="AngularJS" />
         </small>
       </p>
     </footer>

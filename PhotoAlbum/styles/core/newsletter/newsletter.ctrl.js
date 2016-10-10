@@ -123,4 +123,18 @@ angular.module('PhotoAlbum.Newsletter')
     }
   ];
 
+  this.listOrder = "up";
+
+  this.setOrder = function(_){
+    if(_ == "down")
+      this.listOrder = "down";
+    else
+      this.listOrder = "up";
+  };
+
+  this.getOrder = function(){
+    if(this.listOrder == "down")
+      return "filename";
+    return "-filename";
+  };
 });

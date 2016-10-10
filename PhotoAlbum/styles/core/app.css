@@ -4,10 +4,15 @@
   border-radius: 0;
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {
-  height: 450px
+.sort-chevron:link, .sort-chevron:visited {
+  color: rgb(96, 96, 96);
+  font-size: 70%;
 }
+
+/*.sort-chevron:visited {
+  color: #f1f1f1;
+  font-size: 80%;
+}*/
 
 /* Set gray background color and 100% height */
 .sidenav {

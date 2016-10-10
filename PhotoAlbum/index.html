@@ -2,31 +2,128 @@
 <html lang="en">
 
   <head>
-    <!-- <meta charset="utf-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- JavaScript -->
-    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script> -->
 
-    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
-    <script type="text/javascript" src="PhotoAlbumApp.js"></script>
+    <link rel="stylesheet" href="styles/core/app.css" />
+    <script type="text/javascript" src="styles/core/app.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/nav/nav.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/nav/nav.cfg.js"></script>
+    <script type="text/javascript" src="styles/core/nav/nav.ctrl.js"></script>
+    <script type="text/javascript" src="styles/core/album/album.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/album/album.cfg.js"></script>
+    <script type="text/javascript" src="styles/core/album/album.ctrl.js"></script>
+    <script type="text/javascript" src="styles/core/newsletter/newsletter.mdl.js"></script>
+    <script type="text/javascript" src="styles/core/newsletter/newsletter.cfg.js"></script>
+    <script type="text/javascript" src="styles/core/newsletter/newsletter.ctrl.js"></script>
   </head>
 
-  <body ng-app="PhotoAlbumApp">
-    <h1>Photo album</h1>
-    <br />
-    <br />
-    <a href="#/albums"> - Photo albums</a>
-    <a href="#/newsletters"> - School newsletters</a>
-    <br />
-    <br />
-    <div ng-view></div>
+  <body ng-app="PhotoAlbum.App" ng-controller="navController as nav">
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://lucienzerger.github.io/"><img src="../images/0e05766852728cd4774a82174c8f34c8_small_crop_green.jpg" height="100%"/></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li ng-class="{'pa-home-color':nav.isSelected(1)}"><a href ng-click="nav.selectTab(1)">Home</a></li>
+            <li ng-class="{'pa-albums-color':nav.isSelected(2)}"><a href ng-click="nav.selectTab(2)">Albums</a></li>
+            <li ng-class="{'pa-newsletters-color':nav.isSelected(3)}"><a href ng-click="nav.selectTab(3)">Newsletters</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group input-group">
+              <input type="text" ng-model="searchKey1" class="form-control" placeholder="Search..">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="searchKey1=''">
+                  &times;
+                  <!-- <span class="glyphicon glyphicon-remove-sign"></span> -->
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <table width="95%" align="center"><tr><td ng-class="{'pa-home-color':nav.isSelected(1), 'pa-albums-color':nav.isSelected(2), 'pa-newsletters-color':nav.isSelected(3)}">
+          <div class="row">
+
+            <div class="col-sm-1">
+            </div>
+
+            <div class="col-sm-10">
+              <br><br><br>
+              <div class="" ng-show="nav.isSelected(1)">
+              </div>
+
+              <div class="" ng-show="nav.isSelected(2)" ng-controller="albumController as album">
+                <table class="" width="95%" align="center">
+                  <tr>
+                    <th>Date</th>
+                    <th>Tags</th>
+                  </tr>
+                  <tr ng-repeat="albumItem in album.list | filter:searchKey1 | orderBy:'-date'">
+                    <td width="10%">
+                      <a href="{{albumItem.url}}">{{albumItem.date}}</a>
+                    </td>
+                    <td width="90%" style="font-size:80%">
+                      <span class="" ng-repeat="albumTag in albumItem.tags">
+                        <span class="glyphicon glyphicon-tag" style="font-size:70%"></span>{{albumTag}}
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="" ng-show="nav.isSelected(3)" ng-controller="newsletterController as newsletter">
+                <table class="" width="95%" align="center">
+                  <tr>
+                    <th>Filename</th>
+                  </tr>
+                  <tr ng-repeat="newsletterItem in newsletter.list | filter:searchKey1 | orderBy:'filename'">
+                    <td width="10%">
+                      <a href="{{newsletterItem.url}}">{{newsletterItem.filename}}</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-sm-1">
+            </div>
+          </div>
+        </td></tr></table>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p>
+        <small>
+          <span class="glyphicon glyphicon-copyright-mark"></span> <a href="https://lucienzerger.github.io/" style="color:white">Lucien Zerger</a>
+          <br>
+          Powered by <img src="https://docs.angularjs.org/img/angularjs-for-header-only.svg" height="20" alt="AngularJS" />
+        </small>
+      </p>
+    </footer>
+
   </body>
 
 </html>

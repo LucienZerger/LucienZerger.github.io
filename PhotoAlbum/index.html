@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="https://lucienzerger.github.io/"><img src="../images/0e05766852728cd4774a82174c8f34c8_small_crop_green.jpg" height="100%"/></a>
+          <a class="navbar-brand" href="https://lucienzerger.github.io/"><img src="../images/0e05766852728cd4774a82174c8f34c8_small_crop_green.jpg" height="120%"/></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -82,7 +82,7 @@
                   </tr>
                   <tr ng-repeat="albumItem in album.list | filter:searchKey1 | orderBy:'-date'">
                     <td width="10%">
-                      <a href="{{albumItem.url}}">{{albumItem.date}}</a>
+                      <a href="{{albumItem.url}}" target="_blank">{{albumItem.date}}</a>
                     </td>
                     <td width="90%" style="font-size:80%">
                       <span class="" ng-repeat="albumTag in albumItem.tags">
@@ -98,9 +98,9 @@
                   <tr>
                     <th>Filename</th>
                   </tr>
-                  <tr ng-repeat="newsletterItem in newsletter.list | filter:searchKey1 | orderBy:'filename'">
+                  <tr ng-repeat="newsletterItem in newsletter.list | filter:searchKey1 | orderBy:'-filename'">
                     <td width="10%">
-                      <a href="{{newsletterItem.url}}">{{newsletterItem.filename}}</a>
+                      <a href="{{newsletterItem.url}}" target="_blank">{{newsletterItem.filename}}</a>
                     </td>
                   </tr>
                 </table>

@@ -9,4 +9,12 @@ angular.module('PhotoAlbum.Nav')
   this.isSelected = function(_){
     return this.tab === _;
   };
+
+  this.getNavItemColour = function(_){
+    switch (expression) {
+      case 1: return "";
+      default:
+
+    }
+  };
 });

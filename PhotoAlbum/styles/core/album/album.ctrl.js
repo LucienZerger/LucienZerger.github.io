@@ -124,7 +124,7 @@ angular.module('PhotoAlbum.Album')
     {
       "date": "",
       "url": "",
-      "tags": ["", ""]
+      "tags": [""]
     }
   ];
 

@@ -122,9 +122,9 @@ angular.module('PhotoAlbum.Album')
       "tags": ["melody", "home", "swimming", "bunk bed", "ymca", "lake eppalock caravan park", "3rd birthday", "lake weeroona", "playground", "bath"]
     },
     {
-      "date": "",
-      "url": "",
-      "tags": [""]
+      "date": "2016.10",
+      "url": "https://goo.gl/photos/ZJxBxK4ASPMXaSsn7",
+      "tags": ["melody"]
     }
   ];
 

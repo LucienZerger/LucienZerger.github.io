@@ -125,8 +125,12 @@ angular.module('PhotoAlbum.Album')
       "date": "2016.10",
       "url": "https://goo.gl/photos/ZJxBxK4ASPMXaSsn7",
       "tags": ["melody"]
-    }
-  ];
+    },
+    {
+      "date": "2016.11",
+      "url": "https://goo.gl/photos/MA5ZJkbLCirQJSdr6",
+      "tags": ["melody", "6th birthday"]
+    }  ];
 
 
   this.listOrder = "up";

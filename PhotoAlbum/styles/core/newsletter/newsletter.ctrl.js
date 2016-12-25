@@ -156,6 +156,10 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2016_039_newsletter_07_December.pdf",
       "url": "https://drive.google.com/file/d/0B2hg3-hloGTeZlBPSWpSOEtBd1U/view",
+    },
+    {
+      "filename": "2016_040_newsletter_14_December.pdf",
+      "url": "https://drive.google.com/file/d/0B2hg3-hloGTeWFB6M2tMWHRXT0E/view",
     }
   ];
 

@@ -130,6 +130,16 @@ angular.module('PhotoAlbum.Album')
       "date": "2016.11",
       "url": "https://goo.gl/photos/MA5ZJkbLCirQJSdr6",
       "tags": ["melody", "6th birthday"]
+    },
+    {
+      "date": "2017.01.24",
+      "url": "https://goo.gl/photos/i9KxBZM7ND2sVBJ87",
+      "tags": ["Melody", "Melbourne", "Zoo"]
+    },
+    {
+      "date": "2017.01.19",
+      "url": "https://goo.gl/photos/Zv3fV5u1SrjntBCa6",
+      "tags": ["Melody", "Echuca"]
     }
   ];
 

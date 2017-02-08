@@ -144,7 +144,8 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2016_036_newsletter_16_November.pdf",
       "url": "https://drive.google.com/file/d/0B2hg3-hloGTeTGpwSkctVnF2Zk0/view",
-    },
+    }
+   ,
     {
       "filename": "2016_037_newsletter_23_November.pdf",
       "url": "https://drive.google.com/file/d/0B2hg3-hloGTeRGFsclh3ckc1Wkk/view",
@@ -164,6 +165,10 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2017_001_newsletter_February_01.pdf",
       "url": "https://drive.google.com/file/d/0B2hg3-hloGTeRUlZdU9INV9jb1k/view",
+    },
+    {
+      "filename": "2017_002_newsletter_February_08.pdf",
+      "url": "https://drive.google.com/file/d/0B2hg3-hloGTeZnVVMjc0clFNcUk/view",
     }
   ];
 

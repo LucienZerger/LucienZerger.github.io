@@ -173,6 +173,18 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2017_003_newsletter_February_15.pdf",
       "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WaFFXcUZGdEtGUVU/view",
+    },
+    {
+      "filename": "2017_004_newsletter_February_22.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WQ1NGc2JObFhGMzQ/view",
+    },
+    {
+      "filename": "2017_005_newsletter_March_1.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WOFBlVXFDdTB2Z0E/view",
+    },
+    {
+      "filename": "2017_006_newsletter_March_08.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WMVV5Sjl2aW5KMmM/view",
     }
   ];
 

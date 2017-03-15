@@ -185,8 +185,11 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2017_006_newsletter_March_08.pdf",
       "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WMVV5Sjl2aW5KMmM/view",
-    }
-  ];
+    },
+    {
+      "filename": "2017_007_newsletter_March_15.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WU09jZXZJY3FZbVE/view",
+    }  ];
 
   this.listOrder = "up";
 

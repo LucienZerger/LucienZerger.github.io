@@ -193,8 +193,11 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2017_008_newsletter_March_22.pdf",
       "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WMXB6TUc3NVFWdnc/view",
-    }
-  ];
+    },
+    {
+      "filename": "2017_009_newsletter_March_29.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WOEdyY1pwbnVGZ0E/view",
+    }  ];
 
   this.listOrder = "up";
 

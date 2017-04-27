@@ -201,6 +201,10 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2017_010_newsletter_April_19.pdf",
       "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WdVk2cWNSQkNwUTA/view",
+    },
+    {
+      "filename": "2017_011_newsletter_April_26.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WVXVxa1kycmN5dDA/view",
     }
   ];
 

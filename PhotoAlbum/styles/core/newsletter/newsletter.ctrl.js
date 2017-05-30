@@ -217,6 +217,10 @@ angular.module('PhotoAlbum.Newsletter')
     {
       "filename": "2017_014_newsletter_May_17.pdf",
       "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WRmV1MFVnQnBHNms/view",
+    },
+    {
+      "filename": "2017_015_newsletter_May_24.pdf",
+      "url": "https://drive.google.com/file/d/0B3K6lwLuo_7WRUI0dEdUVXdVM2s/view",
     }
   ];
 
